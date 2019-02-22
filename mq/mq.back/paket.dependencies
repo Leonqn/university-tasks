@@ -1,0 +1,10 @@
+source https://nuget.org/api/v2
+
+nuget FAKE
+nuget Chiron
+nuget Suave
+nuget Dapper
+nuget Npgsql
+nuget NLog.FSharp
+nuget FSharp.Configuration
+nuget FSharp.Data

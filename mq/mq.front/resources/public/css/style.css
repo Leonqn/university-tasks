@@ -1,0 +1,100 @@
+@import "vendor/font-awesome.min.css";
+@import "vendor/bootstrap.min.css";
+@import "vendor/codemirror.css";
+
+body {
+    padding-bottom: 2rem;
+}
+
+.program-preview {
+    background-color: antiquewhite;
+}
+
+.CodeMirror {
+    border: 1px solid #ddd;
+    height: auto;
+}
+
+.card-text .CodeMirror {
+    border: 0;
+}
+
+.cred-input {
+    margin: 0 3px 0 0;
+}
+
+.filter-input {
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    height: 42px;
+    display: inline-block;
+    vertical-align: top; /* here */
+    margin-right: 5px;
+}
+
+.pagination {
+    margin-top: 0;
+    text-align: center;
+}
+
+.program-item {
+    color: black;
+}
+
+.program-item:hover {
+    cursor: pointer;
+    color: darkgrey;
+}
+
+.remove-scope {
+    padding-left: 0.4rem;
+}
+
+.remove-scope:hover {
+    color: gray;
+}
+
+.scope-tab {
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+    background-color: ghostwhite;
+}
+
+.add-to-scope {
+    margin-bottom: 0.2rem;
+}
+
+.add-to-scope:hover {
+    color: gray;
+}
+
+.pending:after {
+    background: #fff;
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: .4;
+    z-index: 1;
+}
+
+.loader {
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.loader:after {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    min-height: 100%;
+    vertical-align: middle;
+}

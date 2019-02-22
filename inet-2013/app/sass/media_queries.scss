@@ -1,0 +1,108 @@
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+@media screen and (max-width: 980px) {
+
+  /* pagewrap */
+  #wrapper {
+    width: 95%;
+  }
+
+  /* content */
+  #main_section {
+    width: 60%;
+    padding: 3% 4%;
+  }
+
+  /* sidebar */
+  #main_aside {
+    width: 30%;
+    .widget {
+      padding: 8% 7%;
+      margin-bottom: 10px;
+    }
+  }
+  /* embedded videos */
+//  .video embed,
+//  .video object,
+//  .video iframe {
+//    width: 100%;
+//    height: auto;
+//    min-height: 300px;
+//  }
+
+}
+
+/************************************************************************************
+smaller than 650
+*************************************************************************************/
+@media screen and (max-width: 650px) {
+
+  /* header */
+//  #header {
+//    height: auto;
+//  }
+
+  /* search form */
+//  #searchform {
+//    position: absolute;
+//    top: 5px;
+//    right: 0;
+//    z-index: 100;
+//    height: 40px;
+//  }
+//  #searchform #s {
+//    width: 70px;
+//  }
+//  #searchform #s:focus {
+//    width: 150px;
+//  }
+
+  /* main nav */
+  #main_menu {
+    position: static;
+  }
+
+  /* content */
+  #main_section {
+    width: auto;
+    float: none;
+    margin: 20px 0;
+  }
+
+  /* sidebar */
+  #main_aside {
+    width: 100%;
+    margin: 0;
+    float: none;
+    .widget {
+      padding: 3% 4%;
+      margin: 0 0 10px;
+    }
+  }
+//  /* embedded videos */
+//  .video embed,
+//  .video object,
+//  .video iframe {
+//    min-height: 250px;
+//  }
+
+}
+
+/************************************************************************************
+smaller than 560
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+
+  /* disable webkit text size adjust (for iPhone) */
+//  html {
+//    -webkit-text-size-adjust: none;
+//  }
+
+  /* main nav */
+  #main_menu a {
+    font-size: 90%;
+    padding: 10px 8px;
+  }
+
+}

@@ -1,0 +1,10 @@
+_ReSharper*
+bin/
+*.swp
+obj/
+*.user
+*.suo
+.gitk*
+*.ide
+.vs
+packages/*

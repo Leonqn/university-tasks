@@ -1,0 +1,31 @@
+=content_for :voting do
+  %table
+    %tr
+      %td
+        %span Хорошо:
+      %td
+        %input{type: 'radio', id: 'ok', name: 'vote', value: 'ok'}
+    %tr
+      %td
+        %span Нормально:
+      %td
+        %input{type: 'radio', id: 'sr_ok', name: 'vote'}
+    %tr
+      %td
+        %span Плохо:
+      %td
+        %input{type: 'radio', id: 'ne_ok', name: 'vote'}
+  %input{type: 'button', id: 'vote', value: 'Проголосовать', style: 'padding: 5px 5px; margin: 5px 0px', onclick: 'vote(true)'}
+
+
+
+  -#.vote
+  -#  %span Хорошо.
+  -#
+  -#.vote
+  -#  %span Нормально.
+  -#
+  -#.vote
+  -#  %span Плохо.
+  -#
+  -#.vote

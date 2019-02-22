@@ -1,0 +1,30 @@
+.pending:after {
+    background: #fff;
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: .4;
+    z-index: 1;
+}
+
+.loader {
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.loader:after {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    min-height: 100%;
+    vertical-align: middle;
+}

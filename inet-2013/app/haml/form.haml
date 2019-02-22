@@ -1,0 +1,120 @@
+=content_for :header do
+  %link{:rel => 'stylesheet', :href => '/css/form.css'}
+
+=content_for :main_section do
+  %form#form{name: 'form', method: 'post'}
+    %p.title
+      Представьтесь
+    %input{type: 'text', required: true, name: 'name'} *
+    %p.title
+      Оцените сайт в целом
+    %table
+      %tr
+        %td
+        %td.radio 1
+        %td.radio 2
+        %td.radio 3
+        %td.radio 4
+        %td.radio 5
+        %td
+      %tr
+        %td
+          %span.radio плохо
+        %td
+          %input.radio{type: 'radio', name: 'full', value: '1'}
+        %td
+          %input.radio{type: 'radio', name: 'full', value: '2'}
+        %td
+          %input.radio{type: 'radio', name: 'full', value: '3'}
+        %td
+          %input.radio{type: 'radio', name: 'full', value: '4'}
+        %td
+          %input.radio{type: 'radio', name: 'full', value: '5'}
+        %td
+          %span.radio хорошо
+    %p.title
+      Выберете наиболее интересные страницы
+      %ul
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'Главная страница'}
+            %sgan главная
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'Галерея'}
+            %span галерея
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'Об авторе'}
+            %span об авторе
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'Гостевая книга'}
+            %span гостевая книга
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'Голосовалка'}
+            %span голосовалка
+        %li
+          %label
+            %input{type: 'checkbox', name: 'like[]', value: 'other'}
+            %span другое:
+          %input{type: 'text', name: 'like_other'}
+    %p.title
+      Ваше отношение к браузерам
+    %table
+      %thead
+        %tr
+          %td
+          %td.radio 1
+          %td.radio 2
+          %td.radio 3
+          %td.radio 4
+          %td.radio 5
+      %tr.f
+        %td IE
+        %td
+          %input.radio{type: 'radio', name: 'ie', value: '1'}
+        %td
+          %input.radio{type: 'radio', name: 'ie', value: '2'}
+        %td
+          %input.radio{type: 'radio', name: 'ie', value: '3'}
+        %td
+          %input.radio{type: 'radio', name: 'ie', value: '4'}
+        %td
+          %input.radio{type: 'radio', name: 'ie', value: '5'}
+      %tr.s
+        %td Chrome & co
+        %td
+          %input.radio{type: 'radio', name: 'chrome', value: '1'}
+        %td
+          %input.radio{type: 'radio', name: 'chrome', value: '2'}
+        %td
+          %input.radio{type: 'radio', name: 'chrome', value: '3'}
+        %td
+          %input.radio{type: 'radio', name: 'chrome', value: '4'}
+        %td
+          %input.radio{type: 'radio', name: 'chrome', value: '5'}
+      %tr.f
+        %td Firefox
+        %td
+          %input.radio{type: 'radio', name: 'firefox', value: '1'}
+        %td
+          %input.radio{type: 'radio', name: 'firefox', value: '2'}
+        %td
+          %input.radio{type: 'radio', name: 'firefox', value: '3'}
+        %td
+          %input.radio{type: 'radio', name: 'firefox', value: '4'}
+        %td
+          %input.radio{type: 'radio', name: 'firefox', value: '5'}
+    %p.title
+      Любимый цвет
+    %input{type: 'color', name: 'color'}
+    %p.title
+      Дата рождения
+    %input{type: 'date', name: 'date'}
+    %p.title
+      Пожелания разработчику
+    %textarea{name: 'wishes', rows: '8', cols: '40'}
+    %div
+    %input{type: 'submit', value: 'Отправить'}

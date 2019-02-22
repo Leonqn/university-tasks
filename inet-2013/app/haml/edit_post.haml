@@ -1,0 +1,17 @@
+%ul#nav_pages
+  -(@post.messages.size - 1).times do |i|
+    %li
+      %button.not_cur_pos{onclick: "change_cur_pos(#{i})", id: "btn_#{i}"}
+        =i
+  %li
+    %button.cur_pos{onclick: "change_cur_pos(#{@post.messages.size - 1})", id: "btn_#{@post.messages.size - 1}"}
+      =@post.messages.size - 1
+
+-(@post.messages.size - 1).times do |i|
+  %blockquote.not_cur_mes{style: 'display: none', id: "mes_#{i}"}
+    %textarea
+      =h @post.messages[i].message
+%blockquote.cur_mes{id: "mes_#{@post.messages.size - 1}"}
+  %textarea
+    =h @post.messages.last.message
+%input{type: 'button', value: 'Изменить', onclick: 'change_post(this)', name: @post.id}

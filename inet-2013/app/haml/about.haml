@@ -1,0 +1,33 @@
+=content_for :header do
+  %link{:rel => 'stylesheet', :href => '/css/about.css'}
+=content_for :main_section do
+  %header
+    %h1 Титков Илья
+  #wrap_row
+    .row
+      %img{src: '/images/me.jpg', alt: 'Я'}
+    #about.row
+      %p
+        Родился 16 апреля 1993 года в городе Серове.
+      %p
+        Окончил школу
+        %a{href: 'http://lyceum.moy.su/'}
+          №7.
+        Учусь в
+        %a{href: 'http://urfu.ru'}
+          УрФУ
+        в
+        %a{href: 'http://imkn.urfu.ru'}
+          Институте математики и компьютерных наук
+        по направлению "Математика. Компьютерные науки."
+  %header
+    %h2 Контакты
+  %ul#contacts.clearfix
+    %li
+      %a{href: 'http://www.lastfm.ru/user/Leonqn', id: 'lastfm'} Lastfm
+    %li
+      %a{href: 'https://vk.com/ilyaleon', id: 'vk'} Vk
+    %li
+      %a{href: 'https://twitter.com/Ilya_leon', id: 'twitter'} Twitter
+    %li
+      %a{href: 'https://github.com/Leonqn', id: 'github'} Github

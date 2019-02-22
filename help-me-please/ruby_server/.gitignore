@@ -1,0 +1,6 @@
+Gemfile.lock
+config/mongoid.yml
+Rakefile
+*.pid
+.idea
+logs

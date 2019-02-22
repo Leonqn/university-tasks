@@ -1,0 +1,6 @@
+﻿{
+	db:	      "nyash",
+	colTexts: "posts",
+	colPics: "pics",
+	colIrls: "irls"
+}

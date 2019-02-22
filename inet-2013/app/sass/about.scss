@@ -1,0 +1,37 @@
+h1 {
+  font-size: 2.75em;
+}
+#wrap_row {
+  padding-bottom: 1em;
+  display: flex;
+  display: -ms-flexbox;
+
+  .row {
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+  }
+  #about {
+    padding-left: 7px;
+  }
+}
+#contacts {
+  list-style-type: none;
+  margin: auto;
+  a {
+    padding-left: 20px;
+    padding-bottom: 2px;
+    display: block;
+  }
+  @each $img in twitter, vk, github, lastfm {
+    ##{$img} {
+      background: url("../images/contacts/#{$img}.ico") no-repeat top left;
+    }
+  }
+  li {
+    display: block;
+    height: auto;
+    float: left;
+    width: 20%;
+    padding: 0 10px 10px;
+  }
+}

@@ -1,0 +1,6 @@
+﻿Db:
+    ConnectionString: Host=localhost;Username=postgres;Password=qwe;Database=mq
+Api:
+    Port: 1465
+Octave:
+    Path: C:\Octave\Octave-4.0.0\bin\octave-cli.exe

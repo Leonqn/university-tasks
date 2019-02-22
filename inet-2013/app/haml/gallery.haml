@@ -1,0 +1,18 @@
+=content_for :header do
+  %link{:rel => 'stylesheet', :href => '/css/gallery.css'}
+  %script{src: '/js/gallery.js'}
+=content_for :main_section do
+  #overlay{onclick: 'next(event)', style: "#{locals[:display]};"}
+    #prev{onmouseover: 'opacity_buttons_over(this)', onmouseout: 'opacity_buttons_out(this)'}
+      #prev_img
+    %img{src: locals[:img], id: locals[:id], alt: locals[:img], onload: 'document.getElementById("loading").style.display = "none"'}
+    #do_start.do_some{data: {title: 'Сделать стартовой'}}
+    #close{onmouseover: 'opacity_buttons_over(this)', onmouseout: 'opacity_buttons_out(this)'}
+      #close_img
+    %img#loading{src: '/images/gallery_navigation/loading.gif', style: "#{locals[:display]};", alt: 'loading'}
+
+  %ul#thumbs.clearfix{onclick: 'show(event)', onload: 'cook()'}
+    -Dir["#{settings.public_dir}/gallery/thumbs/*"].map {|e| [e[6..-1], e[6..-1].gsub('thumbs/', '')]}.sort_by{|e| e[1][15..-5].to_i}.each_with_index do |e, i|
+      %li
+        %a{href: e[1], onclick: 'return false;', title: i.to_s}
+          %img{src: e[0], alt: e[1][8..-1]}

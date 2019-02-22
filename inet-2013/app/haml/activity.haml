@@ -1,0 +1,13 @@
+-@activity.each do |page|
+  %p
+    %span
+      %strong
+        url:
+    %span{style: 'color: #3278af'}
+      =page.page
+    %br
+    %span
+      %strong
+        when:
+    %span
+      =page.date.to_time

@@ -1,0 +1,9 @@
+$fa-font-path: '~font-awesome/fonts/';
+
+@import '~bulma/bulma.sass';
+@import '~font-awesome/scss/font-awesome.scss';
+@import 'signin.scss';
+@import "loading.scss";
+@import "programs_list.scss";
+@import "programs_details.scss";
+@import "spinner.scss";

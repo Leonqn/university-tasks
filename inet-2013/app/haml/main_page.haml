@@ -1,0 +1,42 @@
+=content_for :header do
+  %link{:rel => 'stylesheet', :href => '/css/main_page.css'}
+
+=content_for :main_section do
+  %article.post.clearfix
+    %header
+      %h1.post_title
+        Описание:
+      %time.post_date{:datetime => '2013-12-02'}
+        Опубликовано 02.12.2013
+    %figure.post_image
+      %img{:src => '/gallery/image_0.jpg', alt: 'Случайная картинка'}
+    %p
+      Эта страничка для задания по курсу "сети".
+      Такие дела вот.
+    %p
+      Серверная часть написана на
+      %a{href: 'https://www.ruby-lang.org/ru/'} ruby,
+      с ипользованием фреймворка
+      %a{href: 'http://www.sinatrarb.com/'} sinatra.
+      Верстка с использованием шаблонизатора
+      %a{href: 'http://haml.info/'} haml
+      + препроцессора css
+      %a{href: 'http://sass-lang.com/'} sass.
+      Клиентские скрипты  написаны
+      %a{href: 'http://coffeescript.org/'} coffeescript
+      затем благополучно скомпилированы в javascript.
+    %p
+      Все приложение развернуто в
+      %a{href: 'https://www.digitalocean.com/'} облаке
+      с
+      %a{href: 'https://www.centos.org/'} CentOS
+      6.5.
+      В качестве веб-сервера используется
+      %a{href: 'http://code.macournoyer.com/thin/'} thin,
+      проксирующий запросы на
+      %a{href: 'http://www.lighttpd.net/'} lighttpd.
+    %p
+      Исходники можно посмотреть на
+      %a{href: 'https://github.com/Leonqn/inet-2013'} гитхабе.
+
+

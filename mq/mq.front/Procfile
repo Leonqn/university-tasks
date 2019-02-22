@@ -1,0 +1,1 @@
+web: java $JVM_OPTS -cp target/mq.front.jar clojure.main -m mq.front.server

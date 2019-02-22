@@ -1,0 +1,54 @@
+=content_for :header do
+  %link{:rel => 'stylesheet', :href => '/css/guest_book.css'}
+  %script{src: '/js/guest_book.js'}
+=content_for :main_section do
+  %form.post_container{method: 'post'}
+    .post_form
+      %input{name: 'user_name', type: 'text', placeholder: 'Имя', value: locals[:user_name]}
+      %span
+        Имя(Может быть пустым)
+    .post_form
+      %input.post_form{name: 'password', type: 'password', placeholder: 'Пароль', value: locals[:password]}
+      %span
+        Пароль для редактирования сообщения.
+    .post_form
+      %textarea.post_form{name: 'message', rows: '4', placeholder: 'Сообщение'}
+        =locals[:message]
+      %span
+        =h 'Поддерживаются тэги: <b>, <i>, <s>.'
+    .post_form
+      =recaptcha_tag :challenge
+    %div
+      %input.post_form{type: 'submit', value: 'Отправить'}
+  -locals[:post].each do |post|
+    %div{id: "post_#{post.id}", class: 'post_container'}
+      .post_info
+        %span.name
+          =h post.user_name
+        %span
+          %script
+            document.write(b_date(new Date(parseInt(
+            =post.time.to_time.to_i
+            + '000'))) + ';')
+        %span.post_num
+          №
+          =post.id
+      #edit
+        %blockquote
+          %p
+            =h post.messages.last.message
+        .edit
+          %input{name: post.id, type: 'password', placeholder: 'пароль'}
+          %input{value: 'ред.', type: 'button', onclick: 'edit_post(this)'}
+          #err{style: 'color: red'}
+  %ul#nav_pages
+    -(0..locals[:size]).each do |i|
+      %li
+        -if i == locals[:page].to_i
+          %span
+            =i
+        -else
+          %a{href: i}
+            =i
+
+

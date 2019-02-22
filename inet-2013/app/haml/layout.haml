@@ -1,0 +1,76 @@
+!!! 5
+%html{:lang => 'ru'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %link{:rel => 'stylesheet', :href => '/css/layout.css'}
+    %link{:rel => 'stylesheet', :href => '/css/media_queries.css'}
+    %link{rel: 'shortcut icon', href: '/images/favicon.ico', type: 'image/x-icon'}
+    =yield_content :header
+    %script{src: '/js/layout.js'}
+    :javascript
+      function b_date(date){
+        return date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + ", " + date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+      }
+    %title МойСайт
+  %body
+    #wrapper
+      %nav#main_menu.clearfix
+        %ul
+          %li
+            %a{href: '/'} На главную
+          %li
+            %a{href: '/gallery'} Галерея
+          %li
+            %a{href: '/about'} Об авторе
+          %li
+            %a{href: '/guest/0'} Гостевая книга
+          %li
+            %a{href: '/form'} Голосовалка
+      %section#main_section
+        =yield_content :main_section
+      %aside#main_aside
+        %section.widget.clearfix
+          :plain
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Ilya_leon" data-widget-id="407443588578947072">Твиты пользователя @Ilya_leon</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        %section.widget.clearfix
+          %p
+            Как дела?
+          #voting
+            =yield_content :voting
+        %section.widget.clearfix
+          %span
+            Всего посещений:
+          %img{src: @in_all_visitors, alt: 'Всего'}
+          %br
+          %span
+            Сегодня:
+          %img{src: @today_visitors, alt: 'Всего'}
+          %br
+          %span
+            %script
+              document.write("Последний раз вы были: " + b_date(new Date(parseInt(
+              =@last_seen.to_time.to_i
+              + '000'))))
+        %section.widget.clearfix
+          %span Информация:
+          %br
+          %span
+            Браузер:
+            =@user_agent.browser
+            =@user_agent.version
+            %br
+            %script
+              document.write(
+              'Разрешение экрана: ' + screen.width + "x" + screen.height)
+            %br
+            Платформа:
+            =@user_agent.platform
+      %footer.main_footer
+        %p
+          &copy;
+          %a{href: 'mailto:kvakva13@ya.ru'} Титков Илья
+          2013
+
+

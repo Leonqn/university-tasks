@@ -1,0 +1,8 @@
+﻿Db:
+    ConnectionString: Host=localhost;Username=postgres;Password=qwe;Database=mq
+Api:
+    Port: 1466
+Agents:
+    - http://localhost:1465
+PostgRest:
+    Tasks: http://localhost:3000/tasks

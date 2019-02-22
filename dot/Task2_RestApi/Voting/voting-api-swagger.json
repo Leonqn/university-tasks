@@ -1,0 +1,116 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.1",
+        "title": "VotingApi"
+    },
+    "paths": {
+        "/voting/voters/{name}": {
+            "put": {
+                "description": "register voter",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "name of voter",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "created",
+                        "schema": {
+                            "type": "string",
+                            "description": "guid with user id"
+                        }
+                    },
+                    "409": {
+                        "description": "user with this name already exists",
+                        "schema": {
+                            "type": "string",
+                            "description": "error message"
+                        }
+                    }
+                }
+            }
+        },
+        "/voting/bulletin": {
+            "get": {
+                "description": "get bulletin",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "string",
+                            "description": "bulletin cases"
+                        }
+                    }
+                }
+            }
+        },
+        "/voting/bulletin/{bulletin-case}": {
+            "put": {
+                "description": "vote for case",
+                "parameters": [
+                    {
+                        "name": "bulletin-case",
+                        "in": "path",
+                        "description": "bulletin case",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "userId",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "unauthorized"
+                    },
+                    "403": {
+                        "description": "forbidden",
+                        "schema": {
+                            "type": "string",
+                            "description": "error message"
+                        }
+                    }
+                }
+            }
+        },
+        "/voting/results": {
+            "get": {
+                "description": "voting results",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "schema": {
+                            "type": "string",
+                            "description": "voting results"
+                        }
+                    },
+                    "404": {
+                        "description": "not-found"
+                    }
+                }
+            }
+        },
+        "/voting/_reset": {
+            "post": {
+                "description": "reset app state",
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    }
+                }
+            }
+        }
+    }
+}

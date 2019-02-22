@@ -1,0 +1,10 @@
+=content_for :header do
+  %script{src: '/js/admin.js'}
+
+=content_for :main_section do
+  %select#select
+    -@visitors.each do |visitor|
+      %option{value: visitor.ip}
+        =visitor.ip
+  %input#show{type: 'button', name: 'show', value: 'Показать', onclick: 'show_activity()'}
+  #activity

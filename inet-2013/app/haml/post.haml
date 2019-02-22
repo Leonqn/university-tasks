@@ -1,0 +1,7 @@
+%blockquote
+  %p
+    =h @post.messages.last.message
+.edit
+  %input{name: @post.id, type: 'password', placeholder: 'пароль'}
+  %input{value: 'ред.', type: 'button', onclick: 'edit_post(this)'}
+  #err{style: 'color: red'}

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "mq.coordinator", "mq.coordinator\mq.coordinator.fsproj", "{52766F1B-7B13-4A68-8F49-1EF14EE00A37}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "mq.executor", "mq.executor\mq.executor.fsproj", "{3A12D23D-5EDE-4329-93DF-D72A38F43726}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "mq.core", "mq.core\mq.core.fsproj", "{8D2E152E-A8AF-4082-9B55-BA1EF602BD7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6E441C91-AE27-4F63-9B4B-9889DE6DE0B5}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nlog", "nlog", "{DAB842DB-8541-4DBE-96B1-11E01A6A8395}"
+	ProjectSection(SolutionItems) = preProject
+		D:\downloads\nlog.config = D:\downloads\nlog.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52766F1B-7B13-4A68-8F49-1EF14EE00A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52766F1B-7B13-4A68-8F49-1EF14EE00A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52766F1B-7B13-4A68-8F49-1EF14EE00A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52766F1B-7B13-4A68-8F49-1EF14EE00A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A12D23D-5EDE-4329-93DF-D72A38F43726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A12D23D-5EDE-4329-93DF-D72A38F43726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A12D23D-5EDE-4329-93DF-D72A38F43726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A12D23D-5EDE-4329-93DF-D72A38F43726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2E152E-A8AF-4082-9B55-BA1EF602BD7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2E152E-A8AF-4082-9B55-BA1EF602BD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2E152E-A8AF-4082-9B55-BA1EF602BD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2E152E-A8AF-4082-9B55-BA1EF602BD7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

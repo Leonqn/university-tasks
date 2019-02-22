@@ -1,0 +1,10 @@
+*.bat
+*.pid
+app_data/
+public/numbers/
+public/answers/
+logs/
+config.yml
+Gemfile.lock
+lighttpd.conf
+Rakefile

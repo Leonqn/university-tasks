@@ -1,0 +1,81 @@
+#overlay {
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+  #overlay #prev {
+    flex: auto;
+    -ms-flex: auto;
+    position: relative; }
+    #overlay #prev #prev_img {
+      height: 17px;
+      width: 9px;
+      overflow: auto;
+      margin: 10px;
+      opacity: 0.4;
+      background: url("../images/gallery_navigation/back.png") no-repeat; }
+  #overlay img {
+    display: block;
+    flex: auto;
+    -ms-flex: auto;
+    max-height: 70%;
+    max-width: 70%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center; }
+  #overlay #do_start {
+    height: 50px;
+    width: 50px;
+    margin: 46px;
+    opacity: 1;
+    overflow: auto;
+    background: url("/images/gallery_navigation/start.png"); }
+  #overlay .do_some {
+    display: inline-block;
+    position: relative;
+    cursor: pointer; }
+  #overlay .do_some:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 5px;
+    font-size: 8px; }
+  #overlay .do_some:hover::after {
+    content: attr(data-title); }
+  #overlay #close {
+    flex: auto;
+    -ms-flex: auto;
+    position: relative; }
+    #overlay #close #close_img {
+      height: 17px;
+      width: 17px;
+      float: right;
+      overflow: auto;
+      margin: 10px;
+      opacity: 0.4;
+      background: url("../images/gallery_navigation/x.png") no-repeat; }
+
+#thumbs {
+  margin: 0;
+  padding: 0;
+  position: static; }
+  #thumbs a {
+    border: solid 1px #ccc;
+    color: #ffffff;
+    width: 88px;
+    height: 88px;
+    padding: 3px;
+    margin: 2px;
+    float: left; }
+  #thumbs li {
+    list-style: none; }
+  #thumbs a:hover {
+    border-color: #FF9900; }
